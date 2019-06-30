@@ -10,7 +10,7 @@
             aria-label="Toggle navigation"
         />
         <div id="navbarTogglerDemo01" class="collapse navbar-collapse">
-            <a class="navbar-brand" href="#">app</a>
+            <a class="navbar-brand" href="/bug-tracker">app</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <router-link to="/tasks" tag="li" active-class="active" class="nav-item" exact>
                     <a class="nav-link">Tasks</a>
