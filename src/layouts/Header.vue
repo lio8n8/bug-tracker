@@ -35,6 +35,8 @@ nav {
     background-color: $color-dark-grey;
     color: #fff;
     height: 80px;
+    width: 100vw;
+    flex-shrink: 0;
 }
 
 .nav-item {

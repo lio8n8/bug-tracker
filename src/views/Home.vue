@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
     </div>
 </template>
 
@@ -13,3 +12,10 @@ export default {
     components: {}
 };
 </script>
+
+<style lang="scss" scoped>
+    .home {
+        display: flex;
+        flex-grow: 1;
+    }
+</style>
