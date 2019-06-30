@@ -1,17 +1,23 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link>|
-            <router-link to="/about">About</router-link>
-        </div>
-        <router-view />
+        <header-element></header-element>
+        <router-view class="container"></router-view>
+        <footer-element></footer-element>
     </div>
 </template>
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 
-export default {};
+import HeaderElement from "./layouts/Header.vue";
+import FooterElement from "./layouts/Footer.vue";
+
+export default {
+    components: {
+        HeaderElement,
+        FooterElement
+    }
+};
 </script>
 
 
