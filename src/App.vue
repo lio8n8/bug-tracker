@@ -8,6 +8,15 @@
   </div>
 </template>
 
+<script>
+import 'bootstrap/dist/css/bootstrap.css';
+
+export default {
+  
+}
+</script>
+
+
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
