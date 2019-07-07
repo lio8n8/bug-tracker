@@ -15,7 +15,7 @@
                 </div>
                 <button
                     type="submit"
-                    class="btn btn-small btn-green"
+                    class="btn-green "
                     @click="signin"
                 >{{$t('common.submit')}}</button>
                 <div class="link">
