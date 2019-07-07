@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import App from './App.vue';
+import i18n from './locale';
 import router from './router';
 import store from './store';
 import urls from './urls';
@@ -16,6 +17,7 @@ const axiosBase = axios.create({
 Vue.prototype.axios = axiosBase;
 
 new Vue({
+    i18n,
     router,
     store,
     render: h => h(App)

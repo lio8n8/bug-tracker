@@ -1,0 +1,28 @@
+{
+    "common": {
+        "home": "Головна",
+        "signin": "Вхід",
+        "signup": "Реєстрація",
+        "signout": "Вихід",
+        "tasks": "Завдання",
+        "info": "Додатково",
+        "back": "Повернутися",
+        "submit": "Підтвердити"
+    },
+    "forms": {
+        "emaillabel": "Емейл",
+        "inputemail": "Введіть емейл",
+        "pswlabel": "Пароль",
+        "inputpsw": "Введіть пароль",
+        "confirmpsw": "Підтвердіть парль"
+    },
+    "signin": {
+        "notregistered": "Не зареєстровані?"
+    },
+    "signup": {
+        "haveaccount": "Вже зареєстровані?"
+    },
+    "notfound": {
+        "title": "404. Сторінка не знайдена. :("
+    }
+}

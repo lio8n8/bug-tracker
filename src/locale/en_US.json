@@ -1,0 +1,36 @@
+{
+    "common": {
+        "home": "Home",
+        "signin": "Signin",
+        "signup": "Signup",
+        "signout": "Signout",
+        "tasks": "Tasks",
+        "info": "Info",
+        "back": "Back",
+        "submit": "Submit",
+        "ok": "Ok"
+    },
+    "forms": {
+        "emaillabel": "Email address",
+        "inputemail": "Enter email",
+        "pswlabel": "Password",
+        "inputpsw": "Enter password",
+        "confirmpsw": "Confirm password"
+    },
+    "signin": {
+        "notregistered": "Not registered yet?"
+    },
+    "signup": {
+        "haveaccount": "Already have account?"
+    },
+    "settings": {
+        "title": "Settings",
+        "selectphoto": "Select photo",
+        "changepsw": "Change Password",
+        "currentpsw": "Current Password",
+        "newpsw": "New Password"
+    },
+    "notfound": {
+        "title": "404. Page not found :("
+    }
+}

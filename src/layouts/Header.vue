@@ -2,15 +2,15 @@
     <nav>
         <ul class="app-nav app-nav-left">
             <router-link to="/tasks" tag="li" class="app-nav-item">
-                <a class="nav-link">Tasks</a>
+                <a class="nav-link">{{$t('common.tasks')}}</a>
             </router-link>
         </ul>
         <ul class="app-nav">
             <router-link to="/signin" tag="li" class="app-nav-item">
-                <a class="nav-link">Signin</a>
+                <a class="nav-link">{{$t('common.signin')}}</a>
             </router-link>
             <router-link to="/signout" tag="li" class="app-nav-item">
-                <a class="nav-link">Signout</a>
+                <a class="nav-link">{{$t('common.signout')}}</a>
             </router-link>
         </ul>
     </nav>
