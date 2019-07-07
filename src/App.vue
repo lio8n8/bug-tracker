@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.css";
-
 import HeaderElement from "./layouts/Header.vue";
 import FooterElement from "./layouts/Footer.vue";
 
