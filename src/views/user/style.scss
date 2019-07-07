@@ -15,18 +15,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: 200px;
+    min-height: 200px;
     padding: 20px;
     border: 1px solid $color-dark-blue;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 10px $color-light-green;
+    color: $color-dark-blue;
 
     h2 {
-        margin: 0;
-    }
-
-    title, label {
-        color: $color-dark-blue
+        margin: 10px 0;
+        font-weight: 200;
+        font-size: 2rem;
     }
 
     form {
@@ -55,6 +54,15 @@
                     outline: none;
                 }
             }
+        }
+
+        .btn-submit {
+            align-self: flex-end;
+            margin: 30px 0;
+        }
+
+        .link {
+            align-self: flex-end;
         }
     }
 }
