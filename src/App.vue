@@ -20,11 +20,16 @@ export default {
 
 
 <style lang="scss">
+body {
+    margin: 0;
+}
+
 #app {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 100vh;
+    width: 100vw;
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
