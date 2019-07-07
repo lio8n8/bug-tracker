@@ -11,7 +11,7 @@
         "ok": "Ok"
     },
     "forms": {
-        "emaillabel": "Email address",
+        "emaillabel": "Email",
         "inputemail": "Enter email",
         "pswlabel": "Password",
         "inputpsw": "Enter password",
