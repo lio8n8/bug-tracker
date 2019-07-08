@@ -48,6 +48,7 @@
                 flex-grow: 1;
                 border: none;
                 font-size: 22px;
+                color: $color-dark-blue;
 
                 &:hover, &:active, &:focus {
                     border: none;
@@ -63,6 +64,11 @@
 
         .link {
             align-self: flex-end;
+
+            a {
+                color: $color-light-blue;
+                text-decoration: none;
+            }
         }
     }
 }
