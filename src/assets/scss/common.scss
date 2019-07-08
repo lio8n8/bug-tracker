@@ -1,22 +1,31 @@
-@mixin btn-standard-animated($backgroundColor, $backgroundColorHover) {
+.btn-standard {
     border: none;
     width: 110px;
     height: 40px;
     color: #FFF;
     font-size: 1rem;
-    background: linear-gradient(to right, $backgroundColorHover, $backgroundColorHover);
-    background-color: $backgroundColor;
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: background-size 0.2s 0s;
+    background-color: $color-dark-grey;
 
     &:hover, &:active, &:focus {
         outline: none;
     }
 
     &:hover {
-        background-size: 100% 100%;
         cursor: pointer;
+    }
+}
+
+@mixin btn-standard-animated($backgroundColor, $backgroundColorHover) {
+    @extend .btn-standard;
+
+    background: linear-gradient(to right, $backgroundColorHover, $backgroundColorHover);
+    background-color: $backgroundColor;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.2s 0s;
+
+    &:hover {
+        background-size: 100% 100%;
     }
 }
 

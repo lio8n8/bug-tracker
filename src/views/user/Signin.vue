@@ -1,5 +1,6 @@
 <template>
     <div class="signin">
+        <button class="btn-standard back-btn">{{$t('common.back')}}</button>
         <div class="form-wrap">
             <h2 class="title">{{$t('common.signin')}}</h2>
             <form v-on:submit.prevent>

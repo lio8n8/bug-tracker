@@ -10,6 +10,16 @@
     align-items: center;
 }
 
+.back-btn {
+    @extend .btn-standard;
+    
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: $color-light-green;
+    border-radius: 20px;
+}
+
 .form-wrap {
     display: flex;
     flex-direction: column;
