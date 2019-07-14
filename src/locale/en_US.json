@@ -15,7 +15,12 @@
         "inputemail": "Enter email",
         "pswlabel": "Password",
         "inputpsw": "Enter password",
-        "confirmpsw": "Confirm password"
+        "confirmpsw": "Confirm password",
+        "errors": {
+            "emailIsEmpty": "Email is required.",
+            "pswIsEmpty": "Password is required.",
+            "pswIsTooShort": "Password is too short."
+        }
     },
     "signin": {
         "notregistered": "Not registered yet?"

@@ -4,17 +4,16 @@
         <div class="form-wrap">
             <h2 class="title">{{$t('common.signin')}}</h2>
             <form v-on:submit.prevent>
-                <div class="form-item" :class="{ 'form-item-error': true }">
+                <div class="form-item" :class="{ 'form-item-error': errors.email }">
                     <label for="email">{{$t('forms.emaillabel')}}:</label>
                     <input v-model="user.email" type="email" class="form-control" id="email" />
-                    <div v-if="errors.psw" class="form-error">{{errors.email}}</div>
                 </div>
-                <div class="form-error">Email is required.</div>
-                <div class="form-item">
+                <div v-if="errors.email" class="form-error">{{errors.email}}</div>
+                <div class="form-item" :class="{ 'form-item-error': errors.psw }">
                     <label for="psw">{{$t('forms.pswlabel')}}:</label>
                     <input v-model="user.psw" type="password" class="form-control" id="psw" />
-                    <div v-if="errors.psw" class="form-error">{{errors.psw}}</div>
                 </div>
+                <div v-if="errors.psw" class="form-error">{{errors.psw}}</div>
                 <button
                     type="submit"
                     class="btn-green btn-submit"
@@ -49,14 +48,37 @@ export default {
     },
     methods: {
         signin() {
+            if (!this.validate()) {
+                return;
+            }
+
             this.axios
                 .post(urls.auth, this.user)
                 .then(res => {
-                    console.log(res);
+                    this.$router.push('/');
                 })
                 .catch(err => {
                     console.error(err);
                 });
+        },
+        validate() {
+            let isValid = true;
+            this.errors = {
+                email: '',
+                psw: ''
+            };
+
+            if (!this.user.email || this.user.email.length <= 0) {
+                this.errors.email = this.$i18n.t('forms.errors.emailIsEmpty');
+                isValid = false;
+            }
+
+            if (!this.user.psw) {
+                this.errors.psw = this.$i18n.t('forms.errors.pswIsEmpty');
+                isValid = false;
+            }
+
+            return isValid;
         }
     }
 };
