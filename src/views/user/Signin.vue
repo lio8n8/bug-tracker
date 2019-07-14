@@ -4,11 +4,12 @@
         <div class="form-wrap">
             <h2 class="title">{{$t('common.signin')}}</h2>
             <form v-on:submit.prevent>
-                <div class="form-item">
+                <div class="form-item" :class="{ 'form-item-error': true }">
                     <label for="email">{{$t('forms.emaillabel')}}:</label>
                     <input v-model="user.email" type="email" class="form-control" id="email" />
                     <div v-if="errors.psw" class="form-error">{{errors.email}}</div>
                 </div>
+                <div class="form-error">Email is required.</div>
                 <div class="form-item">
                     <label for="psw">{{$t('forms.pswlabel')}}:</label>
                     <input v-model="user.psw" type="password" class="form-control" id="psw" />
@@ -21,7 +22,9 @@
                 >{{$t('common.submit')}}</button>
                 <div class="link">
                     {{$t('signin.notregistered')}}
-                    <a href="/signup">{{$t('common.signup')}}</a>
+                    <a
+                        href="/bug-tracker/signup"
+                    >{{$t('common.signup')}}</a>
                 </div>
             </form>
         </div>
