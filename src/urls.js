@@ -1,5 +1,6 @@
 module.exports = {
-    base: 'http://bug-tracker-api:8080',
-    users: `${this.base}/users`,
-    tasks: `${this.base}/tasks`
+    base: 'http://127.0.0.1:8080/api',
+    auth: '/auth',
+    users: '/users',
+    tasks: '/tasks'
 }

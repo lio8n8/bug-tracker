@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import urls from '../../urls';
+
 export default {
     data() {
         return {
@@ -43,7 +45,16 @@ export default {
         };
     },
     methods: {
-        signin() {}
+        signin() {
+            this.axios
+                .post(urls.auth, this.user)
+                .then(res => {
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        }
     }
 };
 </script>

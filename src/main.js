@@ -10,7 +10,12 @@ import './registerServiceWorker';
 Vue.config.productionTip = false;
 
 const axiosBase = axios.create({
-    baseURL: urls.base
+    baseURL: urls.base,
+    timeout: 5000,
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': '*'
+    }
 });
 
 // Vue.prototype.$http = axiosBase;
