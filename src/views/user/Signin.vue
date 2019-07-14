@@ -9,16 +9,19 @@
                     <input v-model="user.email" type="email" class="form-control" id="email" />
                 </div>
                 <div v-if="errors.email" class="form-error">{{errors.email}}</div>
+
                 <div class="form-item" :class="{ 'form-item-error': errors.psw }">
                     <label for="psw">{{$t('forms.pswlabel')}}:</label>
                     <input v-model="user.psw" type="password" class="form-control" id="psw" />
                 </div>
                 <div v-if="errors.psw" class="form-error">{{errors.psw}}</div>
+
                 <button
                     type="submit"
                     class="btn-green btn-submit"
                     @click="signin"
                 >{{$t('common.submit')}}</button>
+
                 <div class="link">
                     {{$t('signin.notregistered')}}
                     <a
@@ -54,6 +57,7 @@ export default {
 
             this.axios
                 .post(urls.auth, this.user)
+                // eslint-disable-next-line
                 .then(res => {
                     this.$router.push('/');
                 })

@@ -19,14 +19,15 @@
         "errors": {
             "emailIsEmpty": "Email is required.",
             "pswIsEmpty": "Password is required.",
-            "pswIsTooShort": "Password is too short."
+            "pswIsTooShort": "Password is too short.",
+            "pswAreNotMatched": "Passwords are not matched."
         }
     },
     "signin": {
         "notregistered": "Not registered yet?"
     },
     "signup": {
-        "haveaccount": "Already have account?"
+        "haveaccount": "Already have an account?"
     },
     "settings": {
         "title": "Settings",
