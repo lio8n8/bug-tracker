@@ -31,9 +31,7 @@
 
                 <div class="link">
                     {{$t('signup.haveaccount')}}
-                    <a
-                        href="/bug-tracker/signup"
-                    >{{$t('common.signin')}}</a>
+                    <router-link to="/signin">{{$t('common.signin')}}</router-link>
                 </div>
             </form>
         </div>
