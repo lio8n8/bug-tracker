@@ -17,24 +17,6 @@
     }
 }
 
-@mixin btn-standard-animated($backgroundColor, $backgroundColorHover) {
-    @extend .btn-standard;
-
-    background: linear-gradient(to right, $backgroundColorHover, $backgroundColorHover);
-    background-color: $backgroundColor;
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: background-size 0.2s 0s;
-
-    &:hover {
-        background-size: 100% 100%;
-    }
-}
-
-.btn-green {
-    @include btn-standard-animated($color-dark-grey, $color-light-green);
-}
-
 .form-wrap {
     .form-item-error {
         color: $color-error;

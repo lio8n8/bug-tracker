@@ -18,15 +18,21 @@
 
                 <div class="form-item" :class="{ 'form-item-error': errors.confirmPsw }">
                     <label for="psw">{{$t('forms.confirmpsw')}}:</label>
-                    <input v-model="user.confirmPsw" type="password" class="form-control" id="confirm-psw" />
+                    <input
+                        v-model="user.confirmPsw"
+                        type="password"
+                        class="form-control"
+                        id="confirm-psw"
+                    />
                 </div>
                 <div v-if="errors.confirmPsw" class="form-error">{{errors.confirmPpsw}}</div>
 
-                <button
+                <button-animated
+                    class="btn-submit"
                     type="submit"
-                    class="btn-green btn-submit"
+                    :text="$t('common.submit')"
                     @click="signup"
-                >{{$t('common.submit')}}</button>
+                />
 
                 <div class="link">
                     {{$t('signup.haveaccount')}}
@@ -41,8 +47,12 @@
 
 <script>
 import urls from '../../urls';
+import buttonAnimated from '../../components/buttons/button-animated';
 
 export default {
+    components: {
+        buttonAnimated
+    },
     data() {
         return {
             user: {
@@ -97,7 +107,9 @@ export default {
             }
 
             if (this.user.psw != this.user.confirmPsw) {
-                this.errors.confirmPsw = this.$i18n.t('forms.errors.pswAreNotMatched');
+                this.errors.confirmPsw = this.$i18n.t(
+                    'forms.errors.pswAreNotMatched'
+                );
                 isValid = false;
             }
 

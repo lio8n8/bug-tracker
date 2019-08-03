@@ -16,11 +16,12 @@
                 </div>
                 <div v-if="errors.psw" class="form-error">{{errors.psw}}</div>
 
-                <button
+                <button-animated
+                    class="btn-submit"
                     type="submit"
-                    class="btn-green btn-submit"
+                    :text="$t('common.submit')"
                     @click="signin"
-                >{{$t('common.submit')}}</button>
+                />
 
                 <div class="link">
                     {{$t('signin.notregistered')}}
@@ -35,8 +36,12 @@
 
 <script>
 import urls from '../../urls';
+import buttonAnimated from '../../components/buttons/button-animated';
 
 export default {
+    components: {
+        buttonAnimated
+    },
     data() {
         return {
             user: {
