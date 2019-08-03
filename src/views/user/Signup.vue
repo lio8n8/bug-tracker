@@ -6,24 +6,19 @@
             <form v-on:submit.prevent>
                 <div class="form-item" :class="{ 'form-item-error': errors.email }">
                     <label for="email">{{$t('forms.emaillabel')}}:</label>
-                    <input v-model="user.email" type="email" class="form-control" id="email" />
+                    <input-default v-model="user.email" type="email" />
                 </div>
                 <div v-if="errors.email" class="form-error">{{errors.email}}</div>
 
                 <div class="form-item" :class="{ 'form-item-error': errors.psw }">
                     <label for="psw">{{$t('forms.pswlabel')}}:</label>
-                    <input v-model="user.psw" type="password" class="form-control" id="psw" />
+                    <input-default v-model="user.psw" type="password" />
                 </div>
                 <div v-if="errors.psw" class="form-error">{{errors.psw}}</div>
 
                 <div class="form-item" :class="{ 'form-item-error': errors.confirmPsw }">
                     <label for="psw">{{$t('forms.confirmpsw')}}:</label>
-                    <input
-                        v-model="user.confirmPsw"
-                        type="password"
-                        class="form-control"
-                        id="confirm-psw"
-                    />
+                    <input-default v-model="user.confirmPsw" type="password" />
                 </div>
                 <div v-if="errors.confirmPsw" class="form-error">{{errors.confirmPpsw}}</div>
 
@@ -48,10 +43,12 @@
 <script>
 import urls from '../../urls';
 import buttonAnimated from '../../components/buttons/button-animated';
+import inputDefault from '../../components/inputs/input-default';
 
 export default {
     components: {
-        buttonAnimated
+        buttonAnimated,
+        inputDefault
     },
     data() {
         return {

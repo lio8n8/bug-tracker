@@ -32,20 +32,6 @@
     label {
         margin-right: 10px;
     }
-
-    input {
-        flex-grow: 1;
-        border: none;
-        font-size: 22px;
-        color: $color-dark-blue;
-
-        &:hover,
-        &:active,
-        &:focus {
-            border: none;
-            outline: none;
-        }
-    }
 }
 
 .form-wrap {
