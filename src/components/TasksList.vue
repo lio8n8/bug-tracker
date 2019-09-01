@@ -1,8 +1,8 @@
 <template>
   <div class="tasks">
     <div class="task-item" v-for="task in tasks">
+      <img class="icon" :src="getImage(task.type)" :alt="task.type" />
       <router-link :to="`/tasks/${task.id}`" tag="span" class="task-id">{{task.id}}</router-link>
-      <img svg-inline class="icon" :src="getImage(task.type)" alt="example" />
       <span class="task-title">{{task.title}}</span>
       <span class="task-priority" :class="task.priority.toLowerCase()">{{task.priority}}</span>
       <span class="task-status" :class="task.status.toLowerCase()">{{task.status}}</span>
@@ -151,6 +151,10 @@ export default {
 }
 
 .task-title {
+    max-width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .task-type,
@@ -174,11 +178,11 @@ export default {
 }
 
 .normal {
-    background-color: $color-light-blue;
+    background-color: $color-light-green;
 }
 
 .minor {
-    background-color: $color-light-green;
+    background-color: $color-light-yellow;
 }
 
 .major {
