@@ -1,11 +1,11 @@
 <template>
   <div class="tasks">
-    <div class="task-item" v-for="task in tasks">
-      <img class="icon" :src="getImage(task.type)" :alt="task.type" />
-      <router-link :to="`/tasks/${task.id}`" tag="span" class="task-id">{{task.id}}</router-link>
-      <span class="task-title">{{task.title}}</span>
-      <span class="task-priority" :class="task.priority.toLowerCase()">{{task.priority}}</span>
-      <span class="task-status" :class="task.status.toLowerCase()">{{task.status}}</span>
+    <div class="task-item" v-for="{id, type, title, priority, status} in tasks" :key="id">
+      <img class="icon" :src="getImage(type)" :alt="type" />
+      <router-link :to="`/tasks/${id}`" tag="span" class="task-id">{{id}}</router-link>
+      <span class="task-title">{{title}}</span>
+      <span class="task-priority" :class="priority.toLowerCase()">{{priority}}</span>
+      <span class="task-status" :class="status.toLowerCase()">{{status}}</span>
     </div>
   </div>
 </template>
