@@ -2,9 +2,10 @@
   <div class="tasks">
     <div class="task-item" v-for="task in tasks">
       <router-link :to="`/tasks/${task.id}`" tag="span" class="task-id">{{task.id}}</router-link>
+      <img svg-inline class="icon" :src="getImage(task.type)" alt="example" />
       <span class="task-title">{{task.title}}</span>
-      <span class="task-type" :class="task.type.toLowerCase()">{{task.type}}</span>
       <span class="task-priority" :class="task.priority.toLowerCase()">{{task.priority}}</span>
+      <span class="task-status" :class="task.status.toLowerCase()">{{task.status}}</span>
     </div>
   </div>
 </template>
@@ -108,6 +109,11 @@ export default {
                 }
             ]
         };
+    },
+    methods: {
+        getImage(type) {
+            return require(`../assets/images/task-types/${type.toLowerCase()}.svg`);
+        }
     }
 };
 </script>
@@ -185,5 +191,10 @@ export default {
 
 .blocker {
     background-color: #000;
+}
+
+.icon {
+    width: 1.8rem;
+    height: 1.8rem;
 }
 </style>
