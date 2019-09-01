@@ -1,7 +1,7 @@
 <template>
   <div class="tasks">
     <div class="task-item" v-for="task in tasks">
-      <span class="task-id">{{task.id}}</span>
+      <router-link :to="`/tasks/${task.id}`" tag="span" class="task-id">{{task.id}}</router-link>
       <span class="task-title">{{task.title}}</span>
       <span class="task-type" :class="task.type.toLowerCase()">{{task.type}}</span>
       <span class="task-priority" :class="task.priority.toLowerCase()">{{task.priority}}</span>
