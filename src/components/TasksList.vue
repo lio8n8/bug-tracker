@@ -139,19 +139,27 @@ export default {
     height: 3rem;
     padding: 0 0.5rem;
 
+    &:hover {
+        background-color: #646809;
+        color: #FFF;
+    }
+
     &:last-child {
         border-bottom: none;
     }
 }
 
 .task-id {
+    width: 35%;
+    text-align: start;
     &:hover {
         cursor: pointer;
     }
 }
 
 .task-title {
-    max-width: 15rem;
+    width: 40%;
+    text-align: start;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -161,8 +169,11 @@ export default {
 .task-priority {
     display: flex;
     color: #fff;
-    padding: 0.2rem 0.8rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 0.4rem;
+    font-size: 0.8rem;
+    width: 4rem;
+    justify-content: center;
 }
 
 .bug {
